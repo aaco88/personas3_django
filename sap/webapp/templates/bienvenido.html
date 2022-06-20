@@ -9,14 +9,34 @@
 <div>Cantidad de Personas agregadas: {{cPersonas}}</div>
 <a href="agregar_persona">Agregar Persona</a>
 <div>
-    <ul>
+    <br>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
         {% for i in tPersonas %}
-        <li>
-        Persona {{i.id}}: {{i.nombre}} {{i.apellido}} {{i.email}}
-        <a href="detalle_persona/{{i.id}}">Detalle Persona</a>
-        </li>
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.nombre}}</td>
+            <td>{{i.apellido}}</td>
+            <td>{{i.email}}</td>
+            <td><a href="detalle_persona/{{i.id}}">Detalle</a></td>
+            <td><a href="editar_persona/{{i.id}}">Editar</a></td>
+            <td><a href="eliminar_persona/{{i.id}}">Eliminar</a></td>
+        </tr>
         {% endfor %}
-    </ul>
+        </tbody>
+    </table>
+
 </div>
 </body>
 </html>
