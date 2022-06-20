@@ -8,6 +8,14 @@
 <h1>Bienvenido al Sistema de Administración de Personas (SAP)</h1>
 <div>Cantidad de Personas agregadas: {{cPersonas}}</div>
 <div>
+    <ul>
+        {% for i in tPersonas %}
+        <li>
+        Persona {{i.id}}: {{i.nombre}} {{i.apellido}} {{i.email}}
+        <a href="detalle_persona/{{i.id}}">Detalle Persona</a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 </body>
 </html>

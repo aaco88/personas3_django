@@ -7,4 +7,5 @@ from personas.models import Persona
 
 def bienvenido(request):
     cantPersonas = Persona.objects.count()
-    return render(request, 'bienvenido.html', {'cPersonas': cantPersonas})
+    todasPersonas = Persona.objects.all()
+    return render(request, 'bienvenido.html', {'cPersonas': cantPersonas, 'tPersonas': todasPersonas})
