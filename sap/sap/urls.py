@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from webapp.views import bienvenido
-from personas.views import detallePersona
+from personas.views import detallePersona, agregarPersona
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bienvenido, name='index'),
-    path('detalle_persona/<int:id>', detallePersona)
+    path('detalle_persona/<int:id>', detallePersona),
+    path('agregar_persona', agregarPersona)
 ]
