@@ -18,6 +18,7 @@ from django.urls import path
 
 from webapp.views import bienvenido, listadoDomicilios
 from personas.views import detallePersona, agregarPersona, editarPersona, eliminarPersona
+from domicilios.views import detalleDomicilio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('editar_persona/<int:id>', editarPersona),
     path('eliminar_persona/<int:id>', eliminarPersona),
 
-    path('listado_domicilios', listadoDomicilios)
+    path('listado_domicilios', listadoDomicilios, name='index2'),
+    path('detalle_domicilio/<int:id>', detalleDomicilio)
 ]
