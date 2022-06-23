@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar</title>
+</head>
+<body>
+<h1>Editar Domicilio</h1>
+<div>
+  <form method="POST">
+      <table>
+          {{fDomicilio}}
+      </table>
+      <button type="submit">Enviar</button>
+      {% csrf_token %}
+  </form>
+</div>
+<br>
+<a href="{% url 'index2' %}">Volver a Listado Domicilios</a>
+</body>
+</html>
